@@ -203,8 +203,8 @@ public abstract class Vala.CCodeMethodModule : CCodeStructModule {
 			function.modifiers |= CCodeModifiers.DEPRECATED;
 		}
 
-		var cparam_map = new HashMap<int,CCodeParameter> (direct_hash, direct_equal);
-		var carg_map = new HashMap<int,CCodeExpression> (direct_hash, direct_equal);
+		var cparam_map = new HashMap<int,CCodeParameter> ();
+		var carg_map = new HashMap<int,CCodeExpression> ();
 
 		var cl = m.parent_symbol as Class;
 
@@ -228,7 +228,7 @@ public abstract class Vala.CCodeMethodModule : CCodeStructModule {
 				function.modifiers |= CCodeModifiers.INTERNAL;
 			}
 
-			cparam_map = new HashMap<int,CCodeParameter> (direct_hash, direct_equal);
+			cparam_map = new HashMap<int,CCodeParameter> ();
 			bool etv_tmp = ellipses_to_valist;
 			ellipses_to_valist = false;
 			generate_cparameters (m, decl_space, cparam_map, function);
@@ -240,7 +240,7 @@ public abstract class Vala.CCodeMethodModule : CCodeStructModule {
 				// _constructv function
 				function = new CCodeFunction (get_ccode_constructv_name ((CreationMethod) m));
 
-				cparam_map = new HashMap<int,CCodeParameter> (direct_hash, direct_equal);
+				cparam_map = new HashMap<int,CCodeParameter> ();
 				generate_cparameters (m, decl_space, cparam_map, function);
 
 				decl_space.add_function_declaration (function);
@@ -440,7 +440,7 @@ public abstract class Vala.CCodeMethodModule : CCodeStructModule {
 			function.modifiers |= CCodeModifiers.INLINE;
 		}
 
-		var cparam_map = new HashMap<int,CCodeParameter> (direct_hash, direct_equal);
+		var cparam_map = new HashMap<int,CCodeParameter> ();
 
 		generate_cparameters (m, cfile, cparam_map, function);
 
@@ -839,8 +839,8 @@ public abstract class Vala.CCodeMethodModule : CCodeStructModule {
 		 * emitter! */
 			    m.signal_reference == null) {
 
-			cparam_map = new HashMap<int,CCodeParameter> (direct_hash, direct_equal);
-			var carg_map = new HashMap<int,CCodeExpression> (direct_hash, direct_equal);
+			cparam_map = new HashMap<int,CCodeParameter> ();
+			var carg_map = new HashMap<int,CCodeExpression> ();
 
 			generate_vfunc (m, creturn_type, cparam_map, carg_map);
 		}
@@ -1032,7 +1032,7 @@ public abstract class Vala.CCodeMethodModule : CCodeStructModule {
 		int min_pos;
 		while (true) {
 			min_pos = -1;
-			foreach (int pos in cparam_map.get_keys ()) {
+			foreach (int pos in cparam_map.keys) {
 				if (pos > last_pos && (min_pos == -1 || pos < min_pos)) {
 					min_pos = pos;
 				}
@@ -1222,8 +1222,8 @@ public abstract class Vala.CCodeMethodModule : CCodeStructModule {
 			vfunc.modifiers |= CCodeModifiers.INTERNAL;
 		}
 
-		var cparam_map = new HashMap<int,CCodeParameter> (direct_hash, direct_equal);
-		var carg_map = new HashMap<int,CCodeExpression> (direct_hash, direct_equal);
+		var cparam_map = new HashMap<int,CCodeParameter> ();
+		var carg_map = new HashMap<int,CCodeExpression> ();
 
 		push_function (vfunc);
 
@@ -1243,7 +1243,7 @@ public abstract class Vala.CCodeMethodModule : CCodeStructModule {
 		if (m.is_variadic ()) {
 			int last_pos = -1;
 			int second_last_pos = -1;
-			foreach (int pos in cparam_map.get_keys ()) {
+			foreach (int pos in cparam_map.keys) {
 				if (pos > last_pos) {
 					second_last_pos = last_pos;
 					last_pos = pos;
