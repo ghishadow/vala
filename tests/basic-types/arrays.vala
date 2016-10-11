@@ -198,6 +198,23 @@ void test_explicit_copying () {
 	assert (a0[1] == a1[1]);
 }
 
+void give_fixed_array (out int i[3]) {
+	i = { 3, 4, 5 };
+}
+
+void take_fixed_array (int i[3]) {
+	assert (i.length == 3);
+	assert (i[1] == 2);
+}
+
+void test_fixed_array () {
+	int i[3] = { 1, 2, 3 };
+	take_fixed_array (i);
+	int j[3];
+	give_fixed_array (out j);
+	assert (j[1] == 4);
+}
+
 void main () {
 	test_integer_array ();
 	test_string_array ();
@@ -210,4 +227,5 @@ void main () {
 	test_generics_array ();
 	test_void_array ();
 	test_explicit_copying ();
+	test_fixed_array ();
 }
