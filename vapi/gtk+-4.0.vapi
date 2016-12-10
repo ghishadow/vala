@@ -12908,55 +12908,55 @@ namespace Gtk {
 		public void remove_provider (Gtk.StyleProvider provider);
 		[Version (since = "3.0")]
 		public static void remove_provider_for_screen (Gdk.Screen screen, Gtk.StyleProvider provider);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_activity", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_activity")]
 		[Version (since = "3.0")]
 		public void render_activity (Cairo.Context cr, double x, double y, double width, double height);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_arrow", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_arrow")]
 		[Version (since = "3.0")]
 		public void render_arrow (Cairo.Context cr, double angle, double x, double y, double size);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_background", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_background")]
 		[Version (since = "3.0.")]
 		public void render_background (Cairo.Context cr, double x, double y, double width, double height);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_background_get_clip", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_background_get_clip")]
 		[Version (since = "3.20")]
 		public Gdk.Rectangle render_background_get_clip (double x, double y, double width, double height);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_check", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_check")]
 		[Version (since = "3.0")]
 		public void render_check (Cairo.Context cr, double x, double y, double width, double height);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_expander", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_expander")]
 		[Version (since = "3.0")]
 		public void render_expander (Cairo.Context cr, double x, double y, double width, double height);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_focus", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_focus")]
 		[Version (since = "3.0")]
 		public void render_focus (Cairo.Context cr, double x, double y, double width, double height);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_frame", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_frame")]
 		[Version (since = "3.0")]
 		public void render_frame (Cairo.Context cr, double x, double y, double width, double height);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_frame_gap", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_frame_gap")]
 		[Version (since = "3.0")]
 		public void render_frame_gap (Cairo.Context cr, double x, double y, double width, double height, Gtk.PositionType gap_side, double xy0_gap, double xy1_gap);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_handle", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_handle")]
 		[Version (since = "3.0")]
 		public void render_handle (Cairo.Context cr, double x, double y, double width, double height);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_icon", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_icon")]
 		[Version (since = "3.2")]
 		public void render_icon (Cairo.Context cr, Gdk.Pixbuf pixbuf, double x, double y);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_icon_surface", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_icon_surface")]
 		[Version (since = "3.10")]
 		public void render_icon_surface (Cairo.Context cr, Cairo.Surface surface, double x, double y);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_insertion_cursor", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_insertion_cursor")]
 		[Version (since = "3.4")]
 		public void render_insertion_cursor (Cairo.Context cr, double x, double y, Pango.Layout layout, int index, Pango.Direction direction);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_layout", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_layout")]
 		[Version (since = "3.0")]
 		public void render_layout (Cairo.Context cr, double x, double y, Pango.Layout layout);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_line", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_line")]
 		[Version (since = "3.0")]
 		public void render_line (Cairo.Context cr, double x0, double y0, double x1, double y1);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_option", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_option")]
 		[Version (since = "3.0")]
 		public void render_option (Cairo.Context cr, double x, double y, double width, double height);
-		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_slider", instance_pos = 0.5)]
+		[CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_render_slider")]
 		[Version (since = "3.0")]
 		public void render_slider (Cairo.Context cr, double x, double y, double width, double height, Gtk.Orientation orientation);
 		[Version (since = "3.0")]
