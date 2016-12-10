@@ -1,0 +1,14 @@
+* skip=false
+info_new skip
+
+nvokeError errordomain name="InvokeError"
+RepositoryError errordomain
+
+Repository
+  .error_quark parent="GI.RepositoryError" name="quark"
+  .dump throws="GI.RepositoryError"
+  .load_typelib throws="GI.RepositoryError"
+  .require throws="GI.RepositoryError"
+
+*_info_* symbol_type="method" instance_idx=0
+*_info_invoke throws="GI.InvokeError"
